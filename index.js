@@ -15,9 +15,9 @@ app.use(express.json());
 
 connectDB();
 
-app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
-app.use('/api/clear-cache', cacheRoutes);
+app.use('/auth', authRoutes);
+app.use('/tasks', taskRoutes);
+app.use('/clear-cache', cacheRoutes);
 
 app.listen( process.env.PORT, () => {
     console.log(`Server listening on port: ${ process.env.PORT}`);
