@@ -10,7 +10,10 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://lemon-pay-frontend.onrender.com', 'https://lemon-pay-fe.onrender.com', 'http://localhost:5173'],
+    credentials: true
+}));
 app.use(express.json());
 
 connectDB();
