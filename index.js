@@ -6,8 +6,11 @@ const authRoutes = require('./routes/auth.route');
 const taskRoutes = require('./routes/task.route');
 const cacheRoutes = require('./routes/cache.route');
 
+const cors = require('cors');
+
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 connectDB();
